@@ -205,7 +205,7 @@ class Main : IXposedHookZygoteInit, IXposedHookLoadPackage, IXposedHookInitPacka
 
         val patch = object : XC_MethodHook() {
             override fun beforeHookedMethod(param: MethodHookParam) {
-                val url = if (config.customLoadUrl.enabled) config.customLoadUrl.url else "https://raw.githubusercontent.com/vendetta-mod/builds/master/vendetta.js"
+                val url = if (config.customLoadUrl.enabled) config.customLoadUrl.url else "https://raw.githubusercontent.com/asdfzxcvbn/vendettaBuilds/4619b109f15316f3cc66dbe3181f6a1cb1edb9aa/vendetta.js"
                 try {
                     val conn = URL(url).openConnection() as HttpURLConnection
                     conn.connectTimeout = 3000
